@@ -1,0 +1,64 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Atharia Research API",
+    "description": "AI research service with 440+ articles. Query, summarize, analyze.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://atharia.onrender.com"
+    }
+  ],
+  "paths": {
+    "/research": {
+      "post": {
+        "summary": "Query research articles",
+        "description": "Search and query 440+ AI research documents",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "description": "Search query"
+                  },
+                  "max_results": {
+                    "type": "integer",
+                    "default": 5
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/summarize": {
+      "post": {
+        "summary": "Summarize content",
+        "description": "Summarize articles or documents",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    }
+  }
+}

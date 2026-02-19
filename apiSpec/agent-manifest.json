@@ -1,0 +1,7 @@
+{
+  "name": "atharia-research",
+  "description": "AI research service with 440+ articles",
+  "url": "https://atharia.onrender.com/research",
+  "capabilities": ["search", "summarize", "analyze"],
+  "version": "1.0.0"
+}
